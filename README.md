@@ -19,8 +19,9 @@
           * run_date
         - test_failed
           * run_date
-      + cucumber.yml (Ci)
-      + features_report.html      
+      * cucumber.yml (for continuous integration)
+      + features_report.json (works by generating html report of cucumber utilizing the json file)
+      + features_report.html (simple report in html with screenshot of expect results)
       
 # Driver needed:
 - For default, on my tests are executed on Chrome.
