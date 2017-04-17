@@ -1,4 +1,4 @@
-# QA Engineer Tester - Tiago Oliveira Silva
+# Cucumber Ruby skeleton
   Functional tests on any platform webapp. The tests are developed with Cucumber framework, Capybara for step definitions and Rspec for expect results. The project is structured with page objects concept (site_prism) and language Ruby. A report is created at the end of the run in HTML. Case upload the project at Github you can use Circle Ci for continous integration.
 
 # The project is structured this way:
