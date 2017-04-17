@@ -19,8 +19,8 @@
           * run_date
         - test_failed
           * run_date
-      * cucumber.yml (for continuous integration)
-      + features_report.json (works by generating html report of cucumber utilizing the json file)
+      * cucumber.yml (for Circle ci)
+      + features_report.json (works by generating html report utilizing the json file with Jenkins)
       + features_report.html (simple report in html with screenshot of expect results)
       
 # Driver needed:
