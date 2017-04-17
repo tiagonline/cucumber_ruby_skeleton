@@ -6,18 +6,22 @@
 - project_name
     * cucumber
       + features
+        * attach
         * hooks
         * page_objects
         * specifications
         * step_definitions
         - support
           * config
+          * knowledgebase
       + screenshots
         - test_passed
           * run_date
         - test_failed
           * run_date
-
+      + cucumber.yml (Ci)
+      + features_report.html      
+      
 # Driver needed:
 - For default, on my tests are executed on Chrome.
 - Install Nodejs (Next, Next e Finish) https://nodejs.org/en/ and after the command below on terminal:
