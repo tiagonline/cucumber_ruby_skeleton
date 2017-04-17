@@ -6,11 +6,11 @@
 - project_name
     * cucumber
       + features
-        * attach
+        * attach (path for attached files needed in the tests)
         * hooks
-        * page_objects
-        * specifications
-        * step_definitions
+        * page_objects (works with site_prism gem for page objects pattern)
+        * specifications (Cucumber BDD)
+        * step_definitions (develop in Capybara, Ruby and Rspec)
         - support
           * config
           * knowledgebase
