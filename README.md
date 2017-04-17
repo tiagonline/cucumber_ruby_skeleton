@@ -1,75 +1,53 @@
-# conformedata
-Projeto Conformedata em Cucumber
+# QA Engineer Tester - Tiago Oliveira Silva
+  Functional tests on any platform webapp. The tests are developed with Cucumber framework, Capybara for step definitions and Rspec for expect results. The project is structured with page objects concept (site_prism) and language Ruby. A report is created at the end of the run in HTML. Case upload the project at Github you can use Circle Ci for continous integration.
+
+# The project is structured this way:
+
+- project_name
+    * cucumber
+      + features
+        * hooks
+        * page_objects
+        * specifications
+        * step_definitions
+        - support
+          * config
+      + screenshots
+        - test_passed
+          * run_date
+        - test_failed
+          * run_date
+
+# Driver needed:
+- For default, on my tests are executed on Chrome.
+- Install Nodejs (Next, Next e Finish) https://nodejs.org/en/ and after the command below on terminal:
 
 ```ruby
-Comandos básicos para iniciar um projeto em Cucumber.
-
-cucumber -- init = Inicia um projeto novo.
-
-Ajustar a estrutura do projeto da seguinte maneira:
-
-  nome_projeto
-    cucumber
-      features
-        attach
-        hooks
-        page_objects
-        specifications
-        step_definitions
-        support
-          config
-          knowledgebase
-
+npm install -g chromedriver
 ```
-No nosso arquivo de Enviroment (env.rb) vamos definir da seguinte maneira:
 
-require 'capybara/cucumber'
-require 'selenium-webdriver'
-require 'rspec'
-require 'faker'
-require 'cpf_faker'
-require 'site_prism'
+# Configuring the enviroment:
+- Needed instalation ruby 2.3.3 and Devkit 64 bits.
+- Install the bundler. Navigate on path \project_name and execute the follow command:
 
-Capybara.register_driver :selenium do |app|
-  Capybara::Selenium::Driver.new(app, :browser => :firefox)
-end
+```ruby
+gem install bundler
+```
 
-Capybara.default_driver = :selenium
-Capybara.default_max_wait_time = 60
+# Installing the gems:
+- Execute this command below on root of project, path of project:
 
-Capybara.app_host = ""
+```ruby
+bundle install
+```
 
+# Executing the tests:
+- On path \project_name\cucumber, execute the command below for execution the all tests:
 
-    ## Configurando o ambiente ##
+```ruby
+cucumber
+```
 
-    ### Instalando o bundler ###
-    Navegar para pasta desejada e executar o seguinte comando:
-    ```shell
-    gem install bundler
-    ```
-
-    ### Instalando as gems ###
-    Execute o seguinte comando dentro da raiz do projeto:
-    ```shell
-    bundle install
-    ```
-
-    #### Windows ####
-
-    Instale o pacote FFI
-    * `gem install ffi --platform ruby` (pode demorar um pouco)
-
-    ### Drivers necessários: ###
-
-    * Instalar e colocar no PATH:
-        * [chromedriver](https://sites.google.com/a/chromium.org/chromedriver/)
-        * [phantomjs](http://phantomjs.org/)
-        * [InternetExplorerDriver](http://www.seleniumhq.org/download/) Escolha a versão correspondente 32 ou 64bit
-    * Instalar a extensão do [Safari para webdriver](http://selenium-release.storage.googleapis.com/2.48/SafariDriver.safariextz).
-
-    #### Preparando o Internet Explorer ####
-
-    1. Verifique o zoom configurado. Deve estar em 100%:
-        * ![Passo 1](readme_img/step_1.png?raw=true "Verificar zoom")
-    2. Desabilite o 'Modo Protegido' para todas as zonas em Opções de Internet > Segurança:
-        * ![Passo 2](readme_img/step_2.png?raw=true "Desabilitar 'Modo Protegido'")
+# Test Report in HTML:
+After the tests are run a report will be available in the path \project_name\cucumber\features_report.html
+Note: The screenshots will be available at the bottom of each report feature.
